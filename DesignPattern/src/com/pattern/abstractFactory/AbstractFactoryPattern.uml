@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="AbstractFactoryPattern">
+  <packagedElement xmi:type="uml:Package" xmi:id="_ve3YESgtEeeDfNL1trPVdQ" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_vfAiACgtEeeDfNL1trPVdQ" name="pattern">
+      <packagedElement xmi:type="uml:Package" xmi:id="_vfAiASgtEeeDfNL1trPVdQ" name="abstractFactory">
+        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiAygtEeeDfNL1trPVdQ" name="ShirtFactory" clientDependency="_vgK_oigtEeeDfNL1trPVdQ _Jxh2xCgyEeeDfNL1trPVdQ _KncyJCgyEeeDfNL1trPVdQ _64rWtCgyEeeDfNL1trPVdQ _7fiiZCgyEeeDfNL1trPVdQ _V7yFxCg1EeeDfNL1trPVdQ _XDnQgCg1EeeDfNL1trPVdQ _XeiR9Cg1EeeDfNL1trPVdQ">
+          <interfaceRealization xmi:id="_vgK_oigtEeeDfNL1trPVdQ" name="ClothesFactory" supplier="_vfAiBCgtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ" contract="_vfAiBCgtEeeDfNL1trPVdQ"/>
+          <ownedOperation xmi:id="_vgK_oygtEeeDfNL1trPVdQ" name="getDenimMaterial" visibility="public">
+            <ownedParameter xmi:id="_vgK_pCgtEeeDfNL1trPVdQ" name="return" type="_vfAiBigtEeeDfNL1trPVdQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_vgK_pSgtEeeDfNL1trPVdQ" name="getCottonMaterial" visibility="public">
+            <ownedParameter xmi:id="_vgK_pigtEeeDfNL1trPVdQ" name="return" type="_vfAiCygtEeeDfNL1trPVdQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_vfAiBCgtEeeDfNL1trPVdQ" name="ClothesFactory">
+          <ownedOperation xmi:id="_vgK_pygtEeeDfNL1trPVdQ" name="getDenimMaterial" visibility="public">
+            <ownedParameter xmi:id="_vgK_qCgtEeeDfNL1trPVdQ" name="return" type="_vfAiBigtEeeDfNL1trPVdQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_vgUwoCgtEeeDfNL1trPVdQ" name="getCottonMaterial" visibility="public">
+            <ownedParameter xmi:id="_vgUwoSgtEeeDfNL1trPVdQ" name="return" type="_vfAiCygtEeeDfNL1trPVdQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiBSgtEeeDfNL1trPVdQ" name="ShirtByCotton" clientDependency="_vgUwoigtEeeDfNL1trPVdQ">
+          <interfaceRealization xmi:id="_vgUwoigtEeeDfNL1trPVdQ" name="CottonMaterial" supplier="_vfAiCygtEeeDfNL1trPVdQ" client="_vfAiBSgtEeeDfNL1trPVdQ" contract="_vfAiCygtEeeDfNL1trPVdQ"/>
+          <ownedOperation xmi:id="_vgUwoygtEeeDfNL1trPVdQ" name="sayCotton" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_vfAiBigtEeeDfNL1trPVdQ" name="DenimMaterial">
+          <ownedComment xmi:id="_vfAiBygtEeeDfNL1trPVdQ">
+            <body>/** 
+ * 牛仔布材质
+ */
+</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_vgUwpCgtEeeDfNL1trPVdQ" name="sayDenim" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiCSgtEeeDfNL1trPVdQ" name="TrousersByDenim" clientDependency="_vhIpOSgtEeeDfNL1trPVdQ">
+          <interfaceRealization xmi:id="_vhIpOSgtEeeDfNL1trPVdQ" name="DenimMaterial" supplier="_vfAiBigtEeeDfNL1trPVdQ" client="_vfAiCSgtEeeDfNL1trPVdQ" contract="_vfAiBigtEeeDfNL1trPVdQ"/>
+          <ownedOperation xmi:id="_vhIpOigtEeeDfNL1trPVdQ" name="sayDenim" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiCigtEeeDfNL1trPVdQ" name="ShirtByDenim" clientDependency="_vhRy4CgtEeeDfNL1trPVdQ">
+          <interfaceRealization xmi:id="_vhRy4CgtEeeDfNL1trPVdQ" name="DenimMaterial" supplier="_vfAiBigtEeeDfNL1trPVdQ" client="_vfAiCigtEeeDfNL1trPVdQ" contract="_vfAiBigtEeeDfNL1trPVdQ"/>
+          <ownedOperation xmi:id="_vhRy4SgtEeeDfNL1trPVdQ" name="sayDenim" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_vfAiCygtEeeDfNL1trPVdQ" name="CottonMaterial">
+          <ownedComment xmi:id="_vfAiDCgtEeeDfNL1trPVdQ">
+            <body>/** 
+ * 纯棉材质
+ */
+</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_vhRy4igtEeeDfNL1trPVdQ" name="sayCotton" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiCCgtEeeDfNL1trPVdQ" name="Client" clientDependency="_tjD15CgxEeeDfNL1trPVdQ _TytAxCgyEeeDfNL1trPVdQ _0ont5CgyEeeDfNL1trPVdQ _5Cf4NCgyEeeDfNL1trPVdQ _VcrH5Sg1EeeDfNL1trPVdQ">
+          <ownedOperation xmi:id="_vhIpNSgtEeeDfNL1trPVdQ" name="main" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_vhIpNigtEeeDfNL1trPVdQ" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vhIpNygtEeeDfNL1trPVdQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vhIpOCgtEeeDfNL1trPVdQ"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DAbzKSgxEeeDfNL1trPVdQ" name="produceShirt" visibility="public">
+            <ownedParameter xmi:id="_DAbzKigxEeeDfNL1trPVdQ" name="material">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_DAbzKygxEeeDfNL1trPVdQ" name="produceTrousers" visibility="public">
+            <ownedParameter xmi:id="_DAbzLCgxEeeDfNL1trPVdQ" name="material">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiDSgtEeeDfNL1trPVdQ" name="TrousersFactory" clientDependency="_vhRy4ygtEeeDfNL1trPVdQ _MZKAVCgyEeeDfNL1trPVdQ _M3lBsCgyEeeDfNL1trPVdQ _8AdeICgyEeeDfNL1trPVdQ _8WfYhCgyEeeDfNL1trPVdQ _sUJg1CgzEeeDfNL1trPVdQ _Wq_8NCg1EeeDfNL1trPVdQ _YCJVUCg1EeeDfNL1trPVdQ _YTfkBCg1EeeDfNL1trPVdQ">
+          <interfaceRealization xmi:id="_vhRy4ygtEeeDfNL1trPVdQ" name="ClothesFactory" supplier="_vfAiBCgtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ" contract="_vfAiBCgtEeeDfNL1trPVdQ"/>
+          <ownedOperation xmi:id="_vhRy5CgtEeeDfNL1trPVdQ" name="getDenimMaterial" visibility="public">
+            <ownedParameter xmi:id="_vhRy5SgtEeeDfNL1trPVdQ" name="return" type="_vfAiBigtEeeDfNL1trPVdQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_vhRy5igtEeeDfNL1trPVdQ" name="getCottonMaterial" visibility="public">
+            <ownedParameter xmi:id="_vhRy5ygtEeeDfNL1trPVdQ" name="return" type="_vfAiCygtEeeDfNL1trPVdQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiAigtEeeDfNL1trPVdQ" name="TrousersByCotton" clientDependency="_vgK_oCgtEeeDfNL1trPVdQ">
+          <interfaceRealization xmi:id="_vgK_oCgtEeeDfNL1trPVdQ" name="CottonMaterial" supplier="_vfAiCygtEeeDfNL1trPVdQ" client="_vfAiAigtEeeDfNL1trPVdQ" contract="_vfAiCygtEeeDfNL1trPVdQ"/>
+          <ownedOperation xmi:id="_vgK_oSgtEeeDfNL1trPVdQ" name="sayCotton" visibility="public"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_tjD15CgxEeeDfNL1trPVdQ" name="Dependency1" supplier="_vfAiBCgtEeeDfNL1trPVdQ" client="_vfAiCCgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Jxh2xCgyEeeDfNL1trPVdQ" name="Dependency2" supplier="_vfAiCigtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_KncyJCgyEeeDfNL1trPVdQ" name="Dependency3" supplier="_vfAiBSgtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_MZKAVCgyEeeDfNL1trPVdQ" name="Dependency4" supplier="_vfAiCSgtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_M3lBsCgyEeeDfNL1trPVdQ" name="Dependency5" supplier="_vfAiAigtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_TytAxCgyEeeDfNL1trPVdQ" name="Usage1" supplier="_vfAiDSgtEeeDfNL1trPVdQ" client="_vfAiCCgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_0ont5CgyEeeDfNL1trPVdQ" name="Usage2" supplier="_vfAiAygtEeeDfNL1trPVdQ" client="_vfAiCCgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_5Cf4NCgyEeeDfNL1trPVdQ" name="Usage3" supplier="_vfAiBCgtEeeDfNL1trPVdQ" client="_vfAiCCgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_64rWtCgyEeeDfNL1trPVdQ" name="Usage4" supplier="_vfAiCigtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_7fiiZCgyEeeDfNL1trPVdQ" name="Usage5" supplier="_vfAiCSgtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_8AdeICgyEeeDfNL1trPVdQ" name="Usage6" supplier="_vfAiBSgtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_8WfYhCgyEeeDfNL1trPVdQ" name="Usage7" supplier="_vfAiAigtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_sUJg1CgzEeeDfNL1trPVdQ" name="Usage8" supplier="_vfAiAigtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_VcrH5Sg1EeeDfNL1trPVdQ" name="Dependency6" supplier="_vfAiBCgtEeeDfNL1trPVdQ" client="_vfAiCCgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_V7yFxCg1EeeDfNL1trPVdQ" name="Dependency7" supplier="_vfAiBigtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Wq_8NCg1EeeDfNL1trPVdQ" name="Dependency8" supplier="_vfAiCygtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_XDnQgCg1EeeDfNL1trPVdQ" name="Dependency9" supplier="_vfAiCigtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_XeiR9Cg1EeeDfNL1trPVdQ" name="Dependency10" supplier="_vfAiCSgtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_YCJVUCg1EeeDfNL1trPVdQ" name="Dependency11" supplier="_vfAiBSgtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_YTfkBCg1EeeDfNL1trPVdQ" name="Dependency12" supplier="_vfAiAigtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+</uml:Model>

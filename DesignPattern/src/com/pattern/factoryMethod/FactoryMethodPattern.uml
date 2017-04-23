@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="FactoryMethodPattern">
+  <packagedElement xmi:type="uml:Package" xmi:id="_X1o_0Cg0EeeDfNL1trPVdQ" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_X1o_0Sg0EeeDfNL1trPVdQ" name="pattern">
+      <packagedElement xmi:type="uml:Package" xmi:id="_X1o_0ig0EeeDfNL1trPVdQ" name="factoryMethod">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_X1o_0yg0EeeDfNL1trPVdQ" name="Product">
+          <ownedOperation xmi:id="_X2c4ICg0EeeDfNL1trPVdQ" name="say" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X1o_1Cg0EeeDfNL1trPVdQ" name="ProductFactory" clientDependency="_pOQcBCg1EeeDfNL1trPVdQ _pjRCtCg1EeeDfNL1trPVdQ">
+          <ownedOperation xmi:id="_X2c4ISg0EeeDfNL1trPVdQ" name="getProductByStatic" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_X2dfMCg0EeeDfNL1trPVdQ">
+              <body>/** 
+ * 静态工厂方法模式
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_X2c4Iig0EeeDfNL1trPVdQ" name="return" type="_X1o_0yg0EeeDfNL1trPVdQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X2dfMSg0EeeDfNL1trPVdQ" name="getProduct" visibility="public">
+            <ownedComment xmi:id="_X2dfMyg0EeeDfNL1trPVdQ">
+              <body>/** 
+ * 工厂方法模式
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_X2dfMig0EeeDfNL1trPVdQ" name="return" type="_X1o_0yg0EeeDfNL1trPVdQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X1o_1Sg0EeeDfNL1trPVdQ" name="FactoryMethodClient" clientDependency="_pf6CJig0EeeDfNL1trPVdQ _74j0dig0EeeDfNL1trPVdQ _8WV8oCg0EeeDfNL1trPVdQ _8u0uFCg0EeeDfNL1trPVdQ">
+          <ownedOperation xmi:id="_X25kVSg0EeeDfNL1trPVdQ" name="main" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_X25kVig0EeeDfNL1trPVdQ" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X25kVyg0EeeDfNL1trPVdQ" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X25kWCg0EeeDfNL1trPVdQ"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X1o_1ig0EeeDfNL1trPVdQ" name="Car" clientDependency="_X25kWSg0EeeDfNL1trPVdQ">
+          <interfaceRealization xmi:id="_X25kWSg0EeeDfNL1trPVdQ" name="Product" supplier="_X1o_0yg0EeeDfNL1trPVdQ" client="_X1o_1ig0EeeDfNL1trPVdQ" contract="_X1o_0yg0EeeDfNL1trPVdQ"/>
+          <ownedOperation xmi:id="_X25kWig0EeeDfNL1trPVdQ" name="say" visibility="public"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_pf6CJig0EeeDfNL1trPVdQ" name="Usage1" supplier="_X1o_1Cg0EeeDfNL1trPVdQ" client="_X1o_1Sg0EeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_74j0dig0EeeDfNL1trPVdQ" name="Dependency1" supplier="_X1o_1Cg0EeeDfNL1trPVdQ" client="_X1o_1Sg0EeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_8WV8oCg0EeeDfNL1trPVdQ" name="Dependency2" supplier="_X1o_0yg0EeeDfNL1trPVdQ" client="_X1o_1Sg0EeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_8u0uFCg0EeeDfNL1trPVdQ" name="Dependency3" supplier="_X1o_1ig0EeeDfNL1trPVdQ" client="_X1o_1Sg0EeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_pOQcBCg1EeeDfNL1trPVdQ" name="Dependency4" supplier="_X1o_0yg0EeeDfNL1trPVdQ" client="_X1o_1Cg0EeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_pjRCtCg1EeeDfNL1trPVdQ" name="Dependency5" supplier="_X1o_1ig0EeeDfNL1trPVdQ" client="_X1o_1Cg0EeeDfNL1trPVdQ"/>
+</uml:Model>
