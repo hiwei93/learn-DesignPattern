@@ -50,7 +50,7 @@
           </ownedComment>
           <ownedOperation xmi:id="_vhRy4igtEeeDfNL1trPVdQ" name="sayCotton" visibility="public"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiCCgtEeeDfNL1trPVdQ" name="Client" clientDependency="_tjD15CgxEeeDfNL1trPVdQ _TytAxCgyEeeDfNL1trPVdQ _0ont5CgyEeeDfNL1trPVdQ _5Cf4NCgyEeeDfNL1trPVdQ _VcrH5Sg1EeeDfNL1trPVdQ">
+        <packagedElement xmi:type="uml:Class" xmi:id="_vfAiCCgtEeeDfNL1trPVdQ" name="Client" clientDependency="_tjD15CgxEeeDfNL1trPVdQ _TytAxCgyEeeDfNL1trPVdQ _0ont5CgyEeeDfNL1trPVdQ _5Cf4NCgyEeeDfNL1trPVdQ _VcrH5Sg1EeeDfNL1trPVdQ _Ckk0UCiUEeeXBOEr5UHK2g _DXeQ4CiUEeeXBOEr5UHK2g">
           <ownedOperation xmi:id="_vhIpNSgtEeeDfNL1trPVdQ" name="main" visibility="public" isStatic="true">
             <ownedParameter xmi:id="_vhIpNigtEeeDfNL1trPVdQ" name="args">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -105,4 +105,6 @@
   <packagedElement xmi:type="uml:Dependency" xmi:id="_XeiR9Cg1EeeDfNL1trPVdQ" name="Dependency10" supplier="_vfAiCSgtEeeDfNL1trPVdQ" client="_vfAiAygtEeeDfNL1trPVdQ"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_YCJVUCg1EeeDfNL1trPVdQ" name="Dependency11" supplier="_vfAiBSgtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_YTfkBCg1EeeDfNL1trPVdQ" name="Dependency12" supplier="_vfAiAigtEeeDfNL1trPVdQ" client="_vfAiDSgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Ckk0UCiUEeeXBOEr5UHK2g" name="Dependency13" supplier="_vfAiAygtEeeDfNL1trPVdQ" client="_vfAiCCgtEeeDfNL1trPVdQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_DXeQ4CiUEeeXBOEr5UHK2g" name="Dependency14" supplier="_vfAiDSgtEeeDfNL1trPVdQ" client="_vfAiCCgtEeeDfNL1trPVdQ"/>
 </uml:Model>
